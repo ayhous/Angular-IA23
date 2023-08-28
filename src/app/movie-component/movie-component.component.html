@@ -1,0 +1,19 @@
+<h2>Liste des Films</h2>
+<div class="movie-container">
+  <div *ngFor="let movie of movies" class="movie-card">
+    <h3>{{ movie.title }}</h3>
+    <p>{{ movie.description }}</p>
+    <p>Acteurs : {{ movie.actors.join(', ') }}</p>
+    <div class="rating-container">
+        <input type="number" class="rating-input" [value]="movie.rate" disabled>
+        <button class="rating-button" (click)="incrementeRatingButton(movie)">Like</button>
+        <button class="rating-button" (click)="decrementeRatingButton(movie)">Dislike</button>
+      </div>
+      <button appHighlight >ASCII CAFEE</button>
+  </div>
+
+  
+
+  </div>
+
+

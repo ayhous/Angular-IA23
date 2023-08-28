@@ -1,1 +1,11 @@
-<p>first-component works!</p>
+<p class="{{classBanane}}" >recuprer la proprieté title : {{title}}</p>
+<p [class]="classBanane.toUpperCase()" [class.read]="isRead" >phrase interpretée var comme javascript</p>
+
+<button type="button"((click))="isReadable()">click</button>
+
+<input (keyup.enter)="isReadable()" type="text" [(ngModel)]="inputVariable">
+{{inputVariable}}
+
+<h2>NickName </h2>
+<p>{{nickName}}</p>
+<input type="text" (keyup.enter)="setNickName(nickNameInput)"#nickNameInput>

@@ -1,0 +1,31 @@
+<p>second-component works!</p>
+
+<p *ngIf = "isVisible">ce text est caché</p>
+
+
+<button type="button" (click)="toggeVisibilities()"> {{buttonText}}</button>
+
+<div *ngFor="let movie of movies; even as IsEven;index as index">
+   
+     <h1 [class.banane]="IsEven" appHighlight >{{index}}   {{movie.titre}} </h1>
+     <h2>{{movie.describe}}</h2> 
+
+ </div>
+<p><button type="button" (click)="mode='card'"> vue carte</button></p>
+
+<p><button type="button" (click)="mode='list'"> vue Liste</button></p>
+
+<div [ngSwitch]="mode">
+    <p *ngSwitchCase="'list'">
+        List View
+
+    </p>
+    <p *ngSwitchCase="'card'">
+    
+        Card View
+
+    </p>
+    <p *ngSwitchDefault="">default vieuw</p>
+
+
+</div>
