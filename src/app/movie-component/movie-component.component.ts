@@ -51,6 +51,7 @@ export class MovieComponentComponent {
 incrementeRatingButton(movie: any){
   movie.rate = movie.rate + 1
   
+  
 }
 decrementeRatingButton(movie: any){
   if (movie.rate > 0) {
